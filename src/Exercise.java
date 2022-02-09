@@ -1,22 +1,28 @@
-//package domain;
+package fateNumber;
 
-public class Exercise {
-    public static void main(String[] args) {
-        int tmp = getSumDigitsOfData("20,02,06", 0);
-        if (tmp/10 != 0) {
-            System.out.println(tmp + ";");
-            System.out.println(getSumDigitsOfData(String.valueOf(tmp), 0) + ";");
-        } else System.out.println(tmp + ";");
-    }
- 
-    private static int getSumDigitsOfData(String data, int indexChar) {
-        if(indexChar > data.length() - 1) return 0;
-        return data.charAt(indexChar) <= '9' && data.charAt(indexChar) > '0' ?
-                (data.charAt(indexChar) - '0') + getSumDigitsOfData(data, indexChar + 1) :
-                getSumDigitsOfData(data, indexChar + 1);
+public class Exercise{
+    public static void main(String [] args){
+        Exercise pn = new Exercise();
+
+        if(pn.isPalindrome("ABBA")){
+            System.out.println("Palindrome");
+        } else {
+            System.out.println("Not Palindrome");
+        }   
     }
 
-    static String Calculate(int R) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    
+
+    public boolean isPalindrome(String original){
+        int i = original.length()-1;
+        int j=0;
+        while(i > j) {
+            if(original.charAt(i) != original.charAt(j)) {
+                return false;
+            }
+            i--;
+            j++;
+        }
+        return true;
     }
 }
