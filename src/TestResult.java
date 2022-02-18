@@ -4,15 +4,12 @@ package fateNumber;
 
 //import domain.Exercise;
 
-public class TestResult {
-
+public class TestResult extends Exercise{
     public static void main(String[] args) {
-
-        
-        System.out.println(Exercise());
-    }
-
-    private static boolean Exercise() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+       
+    
+        System.out.println(isPalindrome("шалаш")); // true
+        System.out.println(isPalindrome("ротор")); // true
+        System.out.println(isPalindrome("мотор")); // false
     }
 }
