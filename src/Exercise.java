@@ -1,7 +1,6 @@
-//package domain;
-
-public class Exercise {
-    public static float Calculate(int R){
-        return (float) (2*Math.PI*Math.sqrt(R));
+package fateNumber;
+public class Exercise{
+public static boolean isPalindrome(String str) {
+        return str.equalsIgnoreCase(new StringBuffer(str).reverse().toString());
     }
 }
